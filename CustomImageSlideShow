@@ -1,5 +1,5 @@
 //ComponentCreation
-//This uses tge ArrowLabel make sure to use the copy the component from "LabelWithAnimatedHoverEffectArrow" file in main to use in this component.
+//This uses a custom component names ArrowLabel make sure to the copy the component from "LabelWithAnimatedHoverEffectArrow" file in main to use in this component.
 
 import React, { useState, useEffect } from "react";
 
