@@ -1,0 +1,90 @@
+import React from "react";
+
+const ArrowLabel = ({ direction = "right", label, href = "#", color }) => {
+  const textColor = color === "black" ? "text-background" : "text-white";
+  return (
+    <>
+      {direction === "right" ? (
+        <a
+          href={href}
+          className={`group inline-flex items-center space-x-2 flex-row justify-center transform rotate-0 ${textColor} font-heading hover:text-textHover`}
+        >
+          <span className="text-2xl xl:text-3xl font-heading">{label}</span>
+          <svg
+            width="24" // Adjust size for mobile
+            height="6" // Adjust size for mobile
+            className={`transition-transform duration-300 group-hover:translate-x-1 sm:group-hover:translate-x-2`}
+          >
+            <path
+              d="M 0,3 H 24 L 19,0 M 24,3 L 19,6"
+              fill="none"
+              stroke="#a58961"
+              strokeWidth="1"
+            />
+          </svg>
+        </a>
+      ) : direction === "left" ? (
+        <a
+          href={href}
+          className={`group inline-flex items-center space-x-2 flex-row justify-center transform rotate-0 ${textColor} font-heading hover:text-textHover`}
+        >
+          <svg
+            width="24" // Adjust size for mobile
+            height="6" // Adjust size for mobile
+            className={`transition-transform duration-300 group-hover:-translate-x-1 sm:group-hover:-translate-x-2`}
+          >
+            <path
+              d="M 24,3 H 0 L 5,0 M 0,3 L 5,6"
+              fill="none"
+              stroke="#a58961"
+              strokeWidth="1"
+            />
+          </svg>
+          <span className="text-2xl xl:text-3xl font-heading">{label}</span>
+        </a>
+      ) : direction === "up" ? (
+        <a
+          href={href}
+          className={`group inline-flex items-center space-x-2 flex-row justify-center transform -rotate-90 ${textColor} font-heading hover:text-textHover`}
+        >
+          <span className="text-2xl xl:text-3xl font-heading">{label}</span>
+          <svg
+            width="24" // Adjust size for mobile
+            height="6" // Adjust size for mobile
+            className={`transition-transform duration-300 group-hover:translate-x-1 sm:group-hover:translate-x-2`}
+          >
+            <path
+              d="M 0,3 H 24 L 19,0 M 24,3 L 19,6"
+              fill="none"
+              stroke="#a58961"
+              strokeWidth="1"
+            />
+          </svg>
+        </a>
+      ) : direction === "down" ? (
+        <a
+          href={href}
+          className={`group inline-flex items-center space-x-2 flex-row justify-center transform rotate-90 ${textColor} font-heading hover:text-textHover`}
+        >
+          <span className="text-2xl xl:text-3xl font-heading">{label}</span>
+          <svg
+            width="24" // Adjust size for mobile
+            height="6" // Adjust size for mobile
+            className={`transition-transform duration-300 group-hover:translate-x-1 sm:group-hover:translate-x-2`}
+          >
+            <path
+              d="M 0,3 H 24 L 19,0 M 24,3 L 19,6"
+              fill="none"
+              stroke="#a58961"
+              strokeWidth="1"
+            />
+          </svg>
+        </a>
+      ) : (
+        <span></span>
+      )}
+    </>
+  );
+};
+
+export default ArrowLabel;
