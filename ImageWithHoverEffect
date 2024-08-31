@@ -1,0 +1,68 @@
+//Component
+//This uses a custom component names ArrowLabel make sure to the copy the component from "LabelWithAnimatedHoverEffectArrow" file in main to use in this component.
+
+import React from "react";
+import ArrowLabel from "./ArrowLabel";
+
+function ImageWithHoverEffect({
+  image,
+  hoverImage,
+  title,
+  subTitle,
+  details,
+  price,
+}) {
+  return (
+    <a href="" className="flex flex-col group relative">
+      {/* Image Container */}
+      <div className="relative w-full h-[400px] mb-4 overflow-hidden">
+        {/* Original Image */}
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover transition-opacity duration-500"
+        />
+
+        {/* Transparent Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-80 flex justify-center items-center opacity-0 transition-opacity duration-1000 group-hover:opacity-100">
+          {/* Hover Image */}
+          <img
+            src={hoverImage}
+            alt="Hover Image"
+            className="w-[163px] h-[168px] object-contain"
+          />
+        </div>
+      </div>
+      {title && (
+        <>
+          <div class="w-full flex flex-col justify-start items-start">
+            <ArrowLabel label={title} color={"white"} />
+          </div>
+          <div class="w-full border-t border-white my-4"></div>
+          <div class="w-full flex flex-col justify-start items-start">
+            <p class="font-bold text-left">{subTitle}</p>
+            <p class="text-left">{details}</p>
+            {price && (
+              <p class="mt-2 font-bold text-left text-textHover">
+                Prices from {price}
+              </p>
+            )}
+          </div>
+        </>
+      )}
+    </a>
+  );
+}
+
+export default ImageWithHoverEffect;
+
+
+//Use
+<ImageWithHoverEffect
+              image={actualImage}
+              hoverImage={logoimage}
+              title={"Title"}
+              subTitle={"Sub Title"}
+              details={"Details"}
+              price={"£599,950"}
+            />
