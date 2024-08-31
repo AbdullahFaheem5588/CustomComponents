@@ -1,3 +1,6 @@
+//ComponentCreation
+
+
 import React from "react";
 
 const ArrowLabel = ({ direction = "right", label, href = "#", color }) => {
@@ -88,3 +91,12 @@ const ArrowLabel = ({ direction = "right", label, href = "#", color }) => {
 };
 
 export default ArrowLabel;
+
+
+//Use
+<ArrowLabel
+            direction="right"
+            label={"View new homes"}
+            color={"white"}
+            href="/NewHomes"
+          />
