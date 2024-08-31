@@ -1,0 +1,76 @@
+import React from "react";
+import logowithname from "../assets/Logo/logo.svg";
+
+function Footer() {
+  return (
+    <div class="flex flex-col bg-background justify-center items-center pt-20 pb-10">
+      <img src={logowithname} alt="Logo with Name" class="w-auto h-40" />
+      <div class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 my-10">
+        <a
+          href="#"
+          className="text-white hover:text-textHover text-xs font-body leading-xs tracking-wide"
+        >
+          NEW HOMES
+        </a>
+        <a
+          href="#"
+          className="text-white hover:text-textHover text-xs font-body leading-xs tracking-wide"
+        >
+          OUR STORY
+        </a>
+        <a
+          href="#"
+          className="text-white hover:text-textHover text-xs font-body leading-xs tracking-wide"
+        >
+          GALLERY
+        </a>
+        <a
+          href="#"
+          className="text-white hover:text-textHover text-xs font-body leading-xs tracking-wide"
+        >
+          LAND
+        </a>
+        <a
+          href="#"
+          className="text-white hover:text-textHover text-xs font-body leading-xs tracking-wide"
+        >
+          COMMERCIAL
+        </a>
+      </div>
+      <div class="font-bold text-fadedText text-m mb-2">Contact us</div>
+      <div class="flex flex-col md:flex-row text-fadedText text-m space-y-4 md:space-y-0 md:space-x-3">
+        <a href="" class="hover:underline">
+          +XXXXXXXXXXX
+        </a>
+        <span class="hidden md:inline">|</span>
+        <a href="" class="hover:underline">
+          abc@abc.com
+        </a>
+      </div>
+      <div class="text-fadedText text-m mt-2">
+        ADDRESS
+      </div>
+      <div class="flex flex-col md:flex-row text-white text-m space-y-4 md:space-y-0 md:space-x-3 mt-14">
+        <a href="" class="hover:underline">
+          ITEM !
+        </a>
+        <span class="hidden md:inline">|</span>
+        <a href="" class="hover:underline">
+          ITEM 2
+        </a>
+        <span class="hidden md:inline">|</span>
+        <a href="" class="hover:underline">
+          ITEM 3
+        </a>
+      </div>
+      <div class="text-white text-m mt-2">
+        © NAME
+        <a href="" class="hover:underline">
+          Website by Abdullah Faheem
+        </a>
+      </div>
+    </div>
+  );
+}
+
+export default Footer;
